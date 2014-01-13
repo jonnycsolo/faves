@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,700);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,10 +56,96 @@ table {
   background-position: 0 0;
 }
 
-body {
-  background: pink;
+html {
+  height: 100%;
 }
 
-a {
-  color: #800000;
+body {
+  height: 100%;
+}
+
+.fave-orange {
+  min-height: 100%;
+  background: orange;
+}
+
+.fave-blue {
+  min-height: 100%;
+  background-color: #40C6FF;
+}
+
+.title {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  padding-top: 75px;
+  padding-left: 100px;
+}
+
+.photo-container {
+  float: left;
+  width: 396px;
+  margin-top: 66px;
+  margin-left: 115px;
+}
+
+.photo {
+  width: 396px;
+  border: solid 1px #EFEFEF;
+}
+
+a:hover img.photo {
+  border: solid 1px #CCC;
+  box-shadow: 1px 1px 5px #999;
+}
+
+.description {
+  width: 500px;
+  margin-top: 66px;
+  margin-left: 60px;
+  float: left;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 24px;
+  line-height: 120%;
+  color: #535353;
+}
+.description a:link, .description a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.next {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  width: 100px;
+  margin-top: 470px;
+  left: 600px;
+}
+.next a:visited {
+  color: white;
+}
+.next a::before, .next a::after {
+  display: inline-block;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.2s;
+}
+.next a::before {
+  margin-right: 10px;
+  content: '[';
+  transform: translateX(20px);
+}
+.next a::after {
+  margin-left: 10px;
+  content: ']';
+  transform: translateX(-20px);
+}
+.next a:hover::before,
+.next a:hover::after,
+.next a:focus::before,
+.next a:focus::after {
+  opacity: 1;
+  transform: translateX(0px);
 }
